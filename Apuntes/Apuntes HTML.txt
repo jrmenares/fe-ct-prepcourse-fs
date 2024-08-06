@@ -1,0 +1,73 @@
+// ¿QUÉ ES?
+
+// HTML o HyperText Makup Language es un lenguaje de marcado y se utiliza para creear páginas webs básicas.
+// Utiliza distintos tipos de etiquetas: formato, bloque y contenido.
+
+// ESTRUCTURA INICIAL:
+
+// <html lang="es">
+//  <head>
+//      ‹title>Mi página web</title>
+//  </head>
+//  <body>
+//      <h1>Mi página web</h1>
+//      <p>Estoy aprendiendo HTML.</p>
+//  </body>
+// </html>
+
+// ETIQUETAS:
+
+// <p> = Etiqueta de apertura
+// </p> = Etiqueta de cierre
+
+// ETIQUETAS DE FORMATO: permiten establecer elementos básicos en la página web.
+
+// ETIQUETAS H: <h1...h6></h1...h6> seguido de la letra, tienen un número del 1 al 6 que permiten establecer jerarquías y títulos en la página.
+// <h1>Este es el título principal de la página web</h1>
+// <h2>Este es el título de una sección de noticias</h2>
+// <h3>Este es el subtitulo de una nota</h3>
+
+// ETIQUETAS P: <p></p> permiten escribir párrafos a nivel de texto sencillo y sin formato.
+// <h3>Este es el subtitulo de una nota</h3>
+// <p>lorem ipsum</p>
+
+// ETIQUETAS OL (orderer list): <ol></ol> permiten configurar un orden de lista específico.
+
+// LI (list item): <li></li>
+// <ol>
+// <li>Este es el item 1</li>
+// <li>Este es el item 2</li>
+// <li>Este es el item 3</li>
+// </ol>
+
+// ETIQUETAS UL (unorderer list): permiten configurar una lista sin un orden específico.
+// <li>Este es un elemento adicional</li>
+// <li>Este es un elemento adicional</li>
+// <li>Este es un elemento adicional</li>
+
+// ETIQUETA HR: <hr /> permite separar con una línea el contenido. No posee un cierre.
+// <li>Este es un elemento adicional</li>
+// <li>Este es un elemento adicional</li>
+// <li>Este es un elemento adicional</li>
+// <hr />
+
+// ETIQUETA SPAN: <span>texto corto 1</span> permite que el texto vaya seguido en la misma línea de trabajo.
+// <span>texto corto 1</span>
+// <span>texto corto 2</span>
+// <span>texto corto 3</span>
+
+// ETIQUETAS DE BLOQUES: elementos que se utilizan para crear secciones de contenido en una página web. 
+// Por defecto, utilizan todo el ancho disponible de su contenedor principal y se colocan en una nueva línea.
+
+// HEADER: representa un grupo de ayudas introductorias o de navegación.
+// MAIN: representa el contenido principal del cuerpo.
+// DIV: permite agrupar elementos y estructurar contenido según su conveniencia
+// FOOTER: contiene información como el nombre del autor, datos de derechos de autor, enlaces a contenido relacionado.
+
+// ETIQUETAS DE CONTENIDO:
+
+// Etiquetas de imágen: <img />
+// Atributo src: <img src="./noticias.jpg" /> permite insertar imágen.
+
+// Etiqueta de enlace: <a
+// Atributo href: <a href="" >Formulario de Contacto</a>

@@ -1,0 +1,496 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2708
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\froman\fcharset0 Times-Roman;\f2\fswiss\fcharset0 Helvetica;
+\f3\fswiss\fcharset0 Helvetica-BoldOblique;\f4\fswiss\fcharset0 Helvetica-Oblique;\f5\froman\fcharset0 Times-Bold;
+\f6\fnil\fcharset0 LucidaGrande-Bold;\f7\froman\fcharset0 Times-Italic;\f8\froman\fcharset0 Times-BoldItalic;
+}
+{\colortbl;\red255\green255\blue255;\red201\green33\blue30;}
+{\*\expandedcolortbl;;\csgenericrgb\c78824\c12941\c11765;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\hyphauto1\hyphfactor90
+\deftab720
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf0 LIFE CYCLES AND GIT FILES STATUS:
+\f1\b0 \
+
+\f0\b \
+1. TRACKED FILES :
+\f2\b0  git-part living files. No pending changes. Last updates are stored into repositories by git add & git commit.
+\f1 \
+
+\f0\b \
+2. STAGED FILES : 
+\f2\b0 git-part living files. Affected by git add command (last changes not included). Still unsaved on local repository. 
+\f1 \
+
+\f0\b \
+3. UNSTAGED FILES :
+\f2\b0  git-part living files. Not affected by git add command, nor git commit. Outdated registry. 
+\f1 \
+
+\f0\b \
+4. UNTRACKED FILES :
+\f2\b0  Not git living files. Unregistred files stored on local hard drive only.
+\f1 \
+
+\f2 \
+\
+
+\f0\b GIT y GITHUB BASIC COMMANDS:
+\f1\b0 \
+
+\f2 \
+
+\f0\b git clone <URL> 
+\f2\b0 : copy a remote repository into a local repository.
+\f1 \
+
+\f2 \
+
+\f0\b git init : 
+\f2\b0 initialize the repository.
+\f1 \
+
+\f0\b \
+git status
+\f2\b0  : checks file version status on local repository (folder).
+\f1 \
+
+\f2 \
+
+\f0\b git add <file name>
+\f2\b0  : adds a file to be tracked.
+\f0\b \
+\
+git add . :
+\f2\b0  adds all modified files from local repository (folder) to be tracked.
+\f1 \
+
+\f2 \
+
+\f0\b git add ./-a 
+\f2\b0 : adds all modified files from local repository (folder) to be tracked.
+\f1 \
+
+\f0\b \
+git reset HEAD : 
+\f2\b0 removes files from staged status in order to back them up to their previous state.
+\f1 \
+
+\f2 \
+
+\f0\b git commit 
+\f2\b0 : adds files from unstaged to tracked area. Files are now updated and stored on local repository. With no options opens default text editor to insert a new commit message before making commit.
+\f1 \
+
+\f2 \
+
+\f0\b git commit -a \'93message\'94
+\f2\b0  :\uc0\u8198 \u8198 ith (-a) option, makes commit of all modified files and lets insert a message (up to 72 characters).
+\f1 \
+
+\f2 \
+
+\f0\b git commit -m \'93message\'94
+\f2\b0  :\uc0\u8198 \u8198 akes commit and (-m) option lets insert a message (up to 72 characters).
+\f1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 git commit --amend -m \'93new updated message\'94
+\f2\b0  : allows to correct the last commit message.
+\f1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf0 \
+	
+\f3\i\b (*): In case of forgetting to add a file:
+\f1\i0\b0 \
+
+\f2 	
+\f4\i git add <file name>
+\f1\i0 \
+
+\f2 	
+\f4\i git commit --amend -m \'93new updated message\'94.
+\f1\i0 \
+
+\f2 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\i \cf0 	
+\f3\b (*): If commit message does not need to be updated:
+\f1\i0\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf0 	
+\f4\i git add <file name>
+\f1\i0 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\i \cf0 	git commit --amend --no-edit
+\f1\i0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f2 \cf0 \
+
+\f0\b git log :
+\f2\b0  shows a timeline of changes committed on a repository.
+\f1 \
+
+\f2 \
+
+\f0\b git push : 
+\f2\b0 upload local repository into remote repository.
+\f1 \
+
+\f2 \
+
+\f0\b git pull : 
+\f2\b0 download new changes from remote repository.
+\f1 \
+
+\f2 \
+
+\f0\b git rm :
+\f2\b0  command \'93remove\'94.
+\f1 \
+
+\f2 \
+	
+\f3\i\b (*): git rm\uc0\u8198 \u8198 -cached : 
+\f4\b0 moves files toward untracked status.
+\f1\i0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f4\i \cf0 	
+\f3\b (*): git rm\uc0\u8198 \u8198 -force : 
+\f4\b0 removes files from git and hard drive. Git stores a backup of those files but advanced commands are needed to restore them.
+\f1\i0 \
+
+\f3\i\b \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f5\i0 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0 \cf0 ANALIZING CHANGES IN PROJECT FILES:
+\f1\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f5\b \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0 \cf0 git log : 
+\f2\b0 shows commits ID as well as a timeline of changes committed on a repository.
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f5\b \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0 \cf0 git show : 
+\f2\b0  displays a list of existing changes in a file. It is useful to find some issues where they\'92re located in and the way to solve them.
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f5\b \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0 \cf0 git diff \'93gif diff commitA commitB\'94: 
+\f2\b0 shows the difference between two versions and not necessarily every change from its creation.
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f5\b \cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0 \cf0 RESET & CHECKOUT:
+\f1\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f5\b \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0 \cf0 git checkout + commit ID : 
+\f2\b0 allows to get back up to a previous version of a specific file or the entire project. This is also a way to move across branches.
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f5\b \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0 \cf0 git log --stat : 
+\f2\b0 a descriptive commit that includes the amount of added/removed lines per file.
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f5\b \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0 \cf0 git reset --soft \'91commit\'92 : 
+\f2\b0 keeps files in staging area, so it\'92s possible to apply last changes from a previous commit.
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f5\b \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0 \cf0 git reset --hard \'91commit\'92 : 
+\f2\b0 deletes permanently all the information kept in staging area.
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f5\b \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0 \cf0 git checkout master \'91archivo.txt\'92 : 
+\f2\b0 backs up to the original version.
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f3\i\b \cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0\i0 \cf0 BRANCHES:
+\f1\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f4\i \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f2\i0 \cf0 The way of making changes on the main project while not affecting the main branch\'92s workflow. 
+\f1 \
+
+\f2 This allows to work safely on a specific part/cluster of the application instead of modifying the whole project.
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f3\i\b \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0\i0 \cf0 Head: 
+\f2\b0 represents the branch and the branch\'92s commit from where it\'92s working on. 
+\f1 \
+
+\f2 This head appears in the last commit of the main branch by default. 
+\f1 \
+
+\f2 However, it\'92s possible to change it by crating a branch (
+\f4\i git branch \'93\'85\'94, git checkout -b \'93\'85\'94) 
+\f2\i0 or move across the timeline towards another commit from any other branch by using 
+\f4\i  git reset \'93\'85\'94, git\uc0\u8198 \u8198 heckout \'93\'85\'94.
+\f1\i0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f3\i\b \cf0 1. Branch Master/Main ----
+\f6\i0 \uc0\u8594 
+\f3\i  To production.
+\f1\i0\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f7\i \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f3\b \cf0 2. Branch Development ----
+\f6\i0 \uc0\u8594 
+\f3\i  Hosts new features and experiments. This branch is matched to Master when finished.
+\f1\i0\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f7\i \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f3\b \cf0 3. Branch Hotfix ----
+\f6\i0 \uc0\u8594 
+\f3\i  Issues and errors are solved here in order to get matched to Master as soon as possible.
+\f1\i0\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f7\i \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0\i0\b \cf0 git branch \'93branch name\'94 ----
+\f6 \uc0\u8594 
+\f0  creates a branch.
+\f1\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f5\b \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0 \cf0 git checkout \'93branch name\'94 ----
+\f6 \uc0\u8594 
+\f0  switches branch.
+\f1\b0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f4\i \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0\i0\b \cf0 MERGE:
+\f1\b0 \
+
+\f0\b \
+
+\f2\b0 Represents the action of matching two branches. It allows to create a new commit by combining two branches: 
+\f4\i from the one where the command is being executed to the branch that\'92s passed after the command.
+\f1\i0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f2 \cf2 (*). It\'92s important to commit before switching branches.
+\f1 \cf0 \
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0\b \cf0 SOLVING CONFLICTS AT MERGING:
+\f1\b0 \
+\
+
+\f2 Git never deletes unless it\'92s instructed to do that.
+\f1 \
+
+\f2 Every time \'93
+\f4\i git merge\'94 or \'93git checkout\'94  i
+\f2\i0 s executed, branches are switching while creating a new commit, but never deleting branches or commits.
+\f1 \
+
+\f2 Commits can be deleted by using
+\f4\i  \'93git reset\'94 or \'93bit branch -d\'94.
+\f1\i0 \
+\
+
+\f2 Files in conflict due to 
+\f4\i git merge 
+\f2\i0 enter to 
+\f3\i\b unmerged
+\f2\i0\b0  state, which works pretty similar to 
+\f3\i\b unstaged
+\f2\i0\b0  files, a middle state between 
+\f3\i\b untracked
+\f2\i0\b0  and 
+\f3\i\b unstaged
+\f2\i0\b0  by executing 
+\f3\i\b git add
+\f2\i0\b0  in order to transfer them into the 
+\f3\i\b staging
+\f2\i0\b0  area and \'93
+\f4\i git commit\'94 
+\f2\i0 to apply changes into the repository.
+\f1 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f5\b \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0 \cf0 USING GITHUB:
+\f1\b0 \
+\
+
+\f2 GitHub is a platform created to store git repositories and can be used as remote servers, as it allows to virtually execute some interactive commands.
+\f1 \
+\
+
+\f0\b Readme.md
+\f2\b0  is a default file stored in a repository. It is very important to set it up to describe the project, its requirements and instructions that sould be followed to succesfully contribute with the project.
+\f1 \
+\
+\
+
+\f0\b STEPS TO CONNECT A GITHUB REPOSITORY TO A LOCAL REPOSITORY:
+\f1\b0 \
+\
+
+\f0\b 1. 
+\f2\b0 Save the GitHub repository URL under the name 
+\f0\b \'93origin\'94.
+\f1\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f4\i \cf0 \'93git remote add origin <URL>\'94.
+\f1\i0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f7\i \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0\i0\b \cf0 2. 
+\f2\b0 Verify that the URL was correctly saved.
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f4\i \cf0 \'93git remote\'94 / \'93git remote -v\'94.
+\f1\i0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f8\i\b \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0\i0 \cf0 3. 
+\f2\b0 Download the remote repository version and merge it to create a commit with both parts of the files. \'93git fetch\'94 and \'93git merge\'94 can be used, as well as \'93git pull\'94 including \'93--allow-unrelated-histories\'94 flag, as shown:
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f4\i \cf0 \'93git pull origin master \'96allow-unrelated-histories\'94.
+\f1\i0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f8\i\b \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0\i0 \cf0 4. 
+\f2\b0 Last: \'93git push\'94 in order to updload the changes to GitHub
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f4\i \cf0 \'93git push origin master\'94.
+\f1\i0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f8\i\b \cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0\i0 \cf0 MANAGING BRANCHES IN GITHUB:
+\f1\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f5\b \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0 \cf0 - Create a branch in local repository:
+\f1\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f4\i \cf0 git branch \'93branch name\'94 /git checkout -b \'93branch name\'94
+\f1\i0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f7\i \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f0\i0\b \cf0 - Publish a local branch into the remote repository:
+\f1\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f4\i \cf0 git push origin \'93branch name\'94.
+\f1\i0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f7\i \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\partightenfactor0
+
+\f2\i0 \cf0 (*). 
+\f0\b gitk : 
+\f2\b0 shows a graphical interface of git.
+\f1 \
+}

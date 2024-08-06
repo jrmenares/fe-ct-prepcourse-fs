@@ -1,0 +1,56 @@
+// DEFINICION:
+
+// Cascading Style Sheets (hoja de estilo en cascada).
+// Permite a los desarrolladores web controlar el diseño y la apariencia de sus sitios web.
+// Al separar el texto de las imágenes de la presentación como colores, fuentes y diseño.
+
+// ESTILOS IN-LINE:
+
+// Todas las etiquetas de HTML (<p> o <h1>), pueden recibir un atributo.
+// Los atributos son propiedades o configuraciones que nos permitirán modificar ese elemento (ej: los estilos).
+
+// ARCHIVO DE CSS:
+
+// Si bien, es posile integrar estilos CSS dentro de etiquetas HTML,
+// Es más recomendado tener archivo específicamente de estilos de CSS,
+// Ya que de esta forma el código estará mejor organizado.
+
+// FUNCIONAMIENTO:
+
+// SELECTOR: referencia que permitirá seleccionar un elemento HTML.
+// PROPIEDAD: indica qué caracterísitica se quiere cambiar de ese elemento.
+// VALOR: indica cuál será el estilo que tendrá esa propiedad.
+
+// SELECTORES Y JERARQUIAS:
+
+// SELECTOR CLASE: permite elegir darle estilos a elementos de una clase específica. (Ej. class="ejemplo-importante"/ejemplo-importante)
+// SELECTOR ETIQUETA: es la manera más amplia de dar estilo a todos los elementos de una misma etiqueta. (Ej. <p>Parrafo 1.</p>/p {font-size: 16px;})
+// SELECTOR ID: es único y se utiliza para seleccionar un elemento HTML específico en función de su atributo de ID. Se define precediendo el nombre del ID con un signo (#). (Ej. h2 id="titulo">titulo1.</h2/#titulo {font-size 24px;})
+
+// JERARQUÍAS CUANDO EXISTA UN CONFLICTO: ETIQUETA < CLASE < ID
+
+// ESTILOS:
+
+// PX: tamaño de los elementos en pixeles. No se utiliza, dada la diferencia de pixeles en las pantallas de los dispositivos.
+// EM: medida relativa entre el tamaño de fuente base y los elementos (1em, 2em, 3em, etc).
+// VW (viewport width): establece el tamaño en relación al % de la pantalla.
+
+// Border: establece un margen/borde que rodea el elemento.
+// Margin: establece que tanto se va a distanciar los bordes del elemento en relación a los elementos que lo rodean. Se suele dejar en "auto" a efectos de centrar el DIV y por compatibilidad de relación de aspecto de las pantallas.
+// Padding: permite despegar las fuentes y los elementos al interior de un border (em). *En el sentido de las agujas del reloj*
+// Border-radius: permite redonder los vértices del border.
+
+// FLEXBOX:
+
+// Valor dentro de CSS destinado a la propiedad display. (display: flex;)
+// Agrupa los elementos en fila.
+// las etiquetas H tienen márgenes preestablecidos.
+
+// Permite posicionar, alinear y direccionar los elementos HTML en la pantalla de manera sencilla.
+// Antes de todo, se suele utilizar una hoja estandarizada "reset.css" creada con chatGPT que permite sacar todos los estilos predeterminados que configuran los navegadores. La hoja debe ser vinculada a index.html como rel="staylesheet"
+
+// PSEUDO CLASES:
+
+// Se utilizan para hacer que un elemento HTML tenga un comportamiento definido.
+// Se escriben luego de un selector y antecedido por dos puntos. (selector: pseudoclase {})
+// :hover: permite que la tarjeta se ilumine al pasar el mouse mediante background-color o incluso cambiar de tamaño. Con transition es posible establecer tiempo en segundos para la respuesta de la interfáz al pasar el mouse.

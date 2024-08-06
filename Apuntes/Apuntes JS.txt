@@ -1,0 +1,460 @@
+// VARIABLES
+
+// String
+var saludo = 'Hola';
+var bootcamp = 'Henry';
+
+// Números
+var numeroEntero = 17
+var numeroNegativo = -4
+var numeroDecimal = 11.75
+var numeroPar = 2
+var numeroImpar = 3
+
+// Booleanos
+var estoyentendiendo = true
+var estoyAburrido = false
+
+// Undefined
+var cajon1;
+console.log(cajon1)
+
+// Null
+var sinNada = null;
+
+// OPERADORES
+
+// Suma
+console.log(1 + 1);
+console.log(3 + 5);
+
+// Resta
+console.log(14 - 7);
+console.log(30 - 9);
+
+// Multiplicación
+console.log(8 * 6);
+console.log(2 * 8);
+
+// División
+console.log(30 / 10);
+console.log(9 / 2);
+
+// Resto
+console.log(95 % 4);
+console.log(4 % 2);
+
+// Prueba de precedencia (PAPOMUDAS)
+console.log(3 + 5 * 2 - 8);
+console.log((3 + 5) * 8 + 2 - 1);
+
+// Suma de strings
+console.log('HOLA ' + 'JULIAN')
+var nombre = 'JULIAN '
+var apellido = 'MENARES'
+var edad = ' 28'
+var saludo = 'HOLA ' + nombre + apellido + edad
+console.log(saludo)
+
+// OPERADORES DE COMPARACIÓN/RELACIONALES
+
+// Mayor que: >
+// Menor que: <
+// Mayor o igual que: >=
+// Menor o igual que: <=
+// Igual que: == *sólo verifica valor*
+// Igual que (estricta): === *verifica tipo de dato y valor*
+// Distinto de !=
+
+// *Devuelven un valor booleano para indicar si la operación es verdadera o falsa*
+
+console.log (4 < 7); 
+console.log (4 < 1 );
+console.log (4 > 4); 
+console.log (4 == 7);
+console.log (8 != 9);
+
+// Igualdad v/s igualdad estricta
+
+console.log (3 == 3); 
+console.log (3 === 3); 
+console.log (3 == "3"); 
+console.log (3 === "3");
+console.log (7 == "7");
+console.log (7 === "7");
+console.log (5 === '5'); // *JS utiliza Abstract Equality Comparison para comparar valores aunque sean de distinto tipo de dato*
+
+// Asignación y asociatividad
+
+var a = 1;
+var b = 2;
+var c = a = b; // *(a = b y luego c = a)*
+var d = b = a;
+var e = (c = d);
+var f = (b = c);
+console.log (a);
+console.log (b);
+console.log (c);
+console.log (d);
+console.log (e);
+console.log (f);
+
+// *La asociatividad ocurre a la derecha*
+
+// FUNCIONES
+
+//Función: sumaTres
+var sumaTres = (x) => {
+    return x + 3;
+}
+
+// Función: cuidadoConElConsoleLog
+function cuidadoConElConsoleLog(nombre) {
+    return nombre;
+}
+console.log(nombre);
+
+// Precedencia de valores
+
+var a = 1;
+var b = 2;
+var c = a = b;
+console.log (c);
+
+// NOMENCLATURA
+
+// En programación existen reglas que permiten la uniformidad en el código y proporcionan un estándar de trabajo.
+
+// camelCase: implica la unión de 2 o más palabras sin espacios entre ellas, con mayúscula inicial en la segunda palabra.
+// PascalCase: la primera letra de la frase también se inicia con mayúscula, al igual que cada palabra.
+// snake_case: siempre utilizada sobre el piso, con letras minúsculas y palabras separadas por guiones.
+
+// CONTROL DE FLUJO (IF/ELSE)
+
+function viajar(destino) {
+    if(destino === 'Brasil') {
+        console.log('Gire a la izquierda');
+    } else if(destino === 'Argentina') {
+        console.log('Gire a la derecha');
+    } else {
+        console.log('Nos perdimos');
+    }
+    viajar('Brasil');
+    viajar('Argentina');
+}
+
+function puedeManejar(edad) {
+    if(edad >= 18) {
+        console.log( true );
+    } 
+        console.log( false );
+    puedeManejar(17);
+}
+
+// OBJETO MATH
+// JavaScript tiene una serie de objetos globales integrados que son de utilidad.
+
+// Math.pow: permite potenciar un número.
+Math.pow(2, 3);
+// 8
+
+// Math.round: permite redondear el número decimal al entero más próximo.
+Math.round(0.49)
+// 0
+Math.round(0.50)
+// 1
+
+// Math.floor: permite redondear el decimal al entero de menor valor.
+Math.floor(5.93)
+// 5
+//Math.ceil: permite redondear el decimal al entero de mayor valor.
+Math.ceil(3.27)
+// 4
+
+// Math.max & Math.min: permiten conocer el valor máximo o mínimo de un conjunto de números.
+Math.max(1, 2, 3, 4, 5)
+// 5
+Math.min(1, 2, 3, 4 ,5)
+// 1
+
+// Math.random: permite generar un número aleatorio entre 0 y 1.
+Math.random();
+// 0.8051478373873
+
+// Number.isInteger(): verifica si un número es entero (true/false).
+
+// OPERADORES LÓGICOS
+
+// AND
+function mayorYMenorYPar(num) {
+	if( num > 5 && num < 10  && num  % 2 === 0 ) console.log(true);
+	else console.log(false);
+};
+mayorYMenorYPar(7);
+mayorYMenorYPar(8);
+
+// OR
+function operadorOr(str) {
+    if (str === 'Henry' || str.length < 2) console.log(true);
+    else console.log(false);
+}
+operadorOr('Henry');
+operadorOr('Javascript');
+operadorOr('H');
+
+// NOT
+function negacion(permiso) {
+    if (permiso) console.log('Tiene permiso');
+}
+negacion(true);
+negacion(false);
+
+// BUCLES / LOOP
+// Secuencias de instrucciones de código que se ejecutan repetidas veces (iteración) hasta que la condición a dicho bucle deja de cumplirse.
+
+// FOR
+// Suele utilizarse para los strings.
+
+for (var i = 0; i < 5; i++) {
+    suma = suma + i;
+    console.log('Variable de iteración: ', i);
+}
+console.log('Variable suma: ', suma);
+
+for (var i = 0; i < 10; i++) {
+    console.log(i);
+}
+
+function buscarLetra(palabra)
+    for (var i = 0; i < palabra.length; i++) {
+        if (palabra [i] === "a") {
+            return ("encontramos la a!")
+        }
+    return ("No la encontramos")
+}
+console.log(buscarLetra("juan"));
+
+// BUCLE INFINITO
+
+// for (var i = 0; i > 0; i++) {
+    console.log(i)
+
+// WHILE
+// Primero verifica la condición, antes de ejecutar el código.
+
+while(suma < 3) {
+    suma = suma + 1;
+        console.log(suma);
+}
+
+var contador = 1
+while (contador <= 5) {
+    console.log(contador);
+    contador++; //6
+}
+
+// DO- WHILE
+// Primero ejecuta el código y luego verifica la condición.
+
+var contador = 1
+do {
+    console.log (contador);
+    contador++; //6
+}   while (contador <= 5);
+
+// CONTROLADOR DE FLUJO / SWITCH
+// if/else comprueban en forma binaria si la condición es verdadera o falsa.
+// En este caso, el switch permite tomar varios caminos posibles.
+
+function diaDeLaSemana(dia) {
+    switch (dia) {
+        case "lunes":
+            return "hoy es lunes";
+        case "martes":
+            return "hoy es martes";
+            break;
+        case "viernes":
+            return "hoy e viernes";
+        default:
+            return "hoy es fin de semana"
+    }
+}
+console.log(diaDeLaSemana("martes"))
+
+// El break corta la ejecución del switch.
+// El return corta la ejecución complete de la función.
+// La sintaxis del switch exige que los casos sean separados con :
+
+// ARRAYS / ARREGLOS
+// Son parte del tipo de dato Object, no son primitivos.
+// Permiten guardar información de distintos tipos de datos (strings, números, booleanos etc).
+// Al igual que con los strings, es posible acceder a los elementos que componen un arreglo a partir de sus índices e iniciando desde el índice 0, entre corchetes.
+
+var comidas = ['pizza', 'café', 'empanadas', 'manzanas'];
+console.log(comidas[1]);
+console.log(comidas[2]);
+console.log(comidas[3]);
+
+// Es posible asignar y reasignar cualquier índice en el array:
+
+var comidas = ['pizza', 'café', 'empanadas', 'manzanas'];
+comidas[1] = 'té';
+console.log(comidas);
+
+// También es posible guardar información del array en una nueva variable.
+
+var comidas = ['pizza', 'café', 'empanadas', 'manzanas'];
+var comidaFavorita = comidas[3];
+console.log(comidaFavorita);
+
+// En el caso de los strings, el método .LENGTH cuenta los caracteres del array, desde el valor 0 (inicial).
+// Para contar los caracteres de un elemento específico del array, usar corchetes.
+
+var comidas = ['pizza', 'café', 'empanadas', 'manzanas'];
+console.log(comidas.length); // 4
+console.log(comidas[0].length); // 5
+
+// Método .PUSH() permite agregar nuevos elementos al final del array.
+// Método .POP() permite eliminar elementos al final del array en forma bruta.
+// Método .UNSHIFT() permite agregar nuevos elementos al inicio de la array.
+// Método .SHIFT() permite eliminar elementos al inicio del array en forma bruta.
+// Método .SORT() ?
+// Método .SLICE() ?
+
+var comidas = ['pizza', 'café', 'empanadas', 'manzanas'];
+
+comidas.shift();
+comidas.pop();
+comidas.push("lasagna", "hamburguesa");
+comidas.unshift("sopa");
+console.log(comidas);
+
+// ARRAYS & FOR
+// Utilizando la técnica de acceso al índice, es posible acceder a los datos del array.
+// También, FOR permite encontrar elementos en el array.
+
+var comidas = ['pizza', 'café', 'empanadas', 'manzanas'];
+for (var i = 0; i < comidas.length; i++) {
+    console.log(comidas[i]);
+}
+// En este caso, el bucle FOR buscará el elemento en toda la lista hasta encontrarlo.
+var comidas = ["pizza", "café", "empanadas"];
+for (var i = 0; i < comidas.length; i++) {
+    if (comidas[i] === 'pizza') {
+        comidas[i] = 'hamburguesa';
+    }
+}
+console.log(comidas);
+
+// ARRAYS & FOR ... OF
+// Itera sobre los valores del array.
+// Su estructura no tiene expresión condicional.
+// Para cada iteración, se asigna el valor de cada elemento a una variable y finaliza cuando ya no tenga más de estas asignaciones por hacer.
+
+var comidas = ["pizza", "café", "empanadas"];
+for (comida of comidas) {
+    console.log(comida)
+}
+
+// ??? En este caso, se procederá a encontrar un elemento y reemplazarlo por otro.
+var comidas = ["pizza", "café", "empanadas"];
+for (comida of comidas) {
+    if (comida === "pizza") {
+        comida = "hamburguesa"
+    }
+}
+console.log(comidas)
+// ???
+
+// ARRAYS & MÉTODO .FOREACH
+// Toma un callback como su único argumento e itera sobre cada elemento del array y llama a la función en él.
+// El callback puede tomar dos argumentos: 1° elemento en sí. 2° índice del argumento (opcional).
+// Callback entre paréntesis como función anónima.
+
+var autos = ['Ford', 'Chevrolet', 'Toyota', 'Tesla'];
+autos.forEach(function (auto) {
+    console.log(auto);
+});
+
+// O se puede crear una instancia de una función para usarla como callback (sin necedidad de usar el argumento de índice).
+
+var autos = ['Ford', 'Chevrolet', 'Toyota', 'Tesla'];
+function mostrarAuto(auto) {
+    console.log(auto);
+}
+autos.forEach(mostrarAuto);
+
+// Con condicionales
+
+var autos = ['Ford', 'Chevrolet', 'Toyota', 'Tesla'];
+function mostrarAuto(auto) {
+    if (auto === "Toyota") {
+    console.log( "este es mi auto:", auto);
+    }
+}
+autos.forEach(mostrarAuto);
+
+// ARRAYS Y MÉTODO .MAP
+// Se utiliza cuando se pretende cambiar cada elemento del array bajo las mismas condiciones, de la misma manera.
+// Se define la función que será pasada por callback en el método .map
+
+var numeros = [1, 2, 3, 4]
+function multiplicarPorTres(elemento) {
+    return  elemento * 3;
+}
+var triple = numeros.map(multiplicarPorTres); // Siempre crear una variable nueva.
+console.log(triple); // [ 3, 6, 9, 12 ]
+
+// O simplemente se puede pasar como callback una función anónima.
+
+var numeros = [1, 2, 3, 4]
+var doble = numeros.map(function(elemento) {
+    return elemento * 2;
+});
+console.log(doble); // [ 2, 4, 6, 8 ]
+
+// ARRAYS y MÉTODO .REDUCE
+// Ejecutará un bucle en el arreglo con la intención de reducir cada elemento en un elemento que se devuelve.
+
+var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var palabras = [" Hola, ", "mi ", "nombre ", "es ", "Martin"];
+
+// Es posible escribir la función anónima en los paréntesis de .reduce.
+// Funciona con cualquier tipo de dato.
+// Si se omite el elemento inicial, siempre comenzará en el primer elemento.
+
+var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var suma = numeros.reduce(function(acc, elemento) {
+    return acc + elemento;
+});
+console.log(suma); // 45
+
+// Se puede escribir una función fuera de los paréntesis de reduce (para usar varias veces después)
+
+var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+function multiplicarDosNumeros(a, b) {
+    return a * b;
+}
+var productos = numeros.reduce(multiplicarDosNumeros);
+console.log(productos); // 362880
+
+// Configurando un acumulador de arranque
+
+var palabras = [" Hola, ", "mi ", "nombre ", "es ", "Martin"];
+var frases = palabras.reduce(function (acc, elemento) {
+    return acc + "" + elemento;
+}, "Frase completa:");
+console.log(frases); // "Frase completa: Hola, mi nombre es Martin"
+
+// OBJETO ARGUMENTS
+// Similar a los arrays, es una estructura.
+// Es accesible dentro de funciones que contienen los valores pasados a esa función.
+// Los ARGUMENTS son arrays que devuelven la información según los argumentos que recibe una determinada función.
+
+function saludo(nombre, apellido) {
+    console.log(arguments[0]);
+}
+return saludo("Alejo", "Soto");
+
+// TIPS:
+// num += 2 es equivalente a num = num + 2.
