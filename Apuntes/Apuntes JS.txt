@@ -213,7 +213,7 @@ negacion(false);
 // Secuencias de instrucciones de código que se ejecutan repetidas veces (iteración) hasta que la condición a dicho bucle deja de cumplirse.
 
 // FOR
-// Suele utilizarse para los strings.
+// Suele utilizarse para los strings cuando sabemos con antelación la cantidad máxima exacta de pasos que queremos ejecutar.
 
 for (var i = 0; i < 5; i++) {
     suma = suma + i;
@@ -234,6 +234,9 @@ function buscarLetra(palabra)
 }
 console.log(buscarLetra("juan"));
 
+// Break: se utiliza dentro de los Bucles For. Nos permite "romper" o finalizar el bucle con antelación si se cumple una condición específica.
+// Continue: se utiliza dentro de los Bucles For. Nos permite omitir alguna de las iteraciones si se cumple una condición específica.
+
 // BUCLE INFINITO
 
 // for (var i = 0; i > 0; i++) {
@@ -241,6 +244,7 @@ console.log(buscarLetra("juan"));
 
 // WHILE
 // Primero verifica la condición, antes de ejecutar el código.
+// Es usado cuando no tenemos la certeza de cuántos pasos vamos a necesitar hasta finalizar la ejecución.
 
 while(suma < 3) {
     suma = suma + 1;
@@ -284,6 +288,7 @@ console.log(diaDeLaSemana("martes"))
 // El break corta la ejecución del switch.
 // El return corta la ejecución complete de la función.
 // La sintaxis del switch exige que los casos sean separados con :
+//
 
 // ARRAYS / ARREGLOS
 // Son parte del tipo de dato Object, no son primitivos.
