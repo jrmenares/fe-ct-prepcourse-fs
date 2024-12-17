@@ -178,7 +178,7 @@ Math.min(1, 2, 3, 4 ,5)
 // 1
 
 // Math.random: permite generar un número aleatorio entre 0 y 1.
-Math.random();
+
 // 0.8051478373873
 
 // Number.isInteger(): verifica si un número es entero (true/false).
@@ -234,8 +234,8 @@ function buscarLetra(palabra)
 }
 console.log(buscarLetra("juan"));
 
-// Break: se utiliza dentro de los Bucles For. Nos permite "romper" o finalizar el bucle con antelación si se cumple una condición específica.
-// Continue: se utiliza dentro de los Bucles For. Nos permite omitir alguna de las iteraciones si se cumple una condición específica.
+// BREAK: se utiliza dentro de los Bucles For. Nos permite "romper" o finalizar el bucle con antelación si se cumple una condición específica.
+// CONTINUE: se utiliza dentro de los Bucles For. Nos permite omitir alguna de las iteraciones si se cumple una condición específica.
 
 // BUCLE INFINITO
 
@@ -291,7 +291,7 @@ console.log(diaDeLaSemana("martes"))
 //
 
 // ARRAYS / ARREGLOS
-// Son parte del tipo de dato Object, no son primitivos.
+// Son parte del tipo de dato Object (objeto global) y no son primitivos.
 // Permiten guardar información de distintos tipos de datos (strings, números, booleanos etc).
 // Al igual que con los strings, es posible acceder a los elementos que componen un arreglo a partir de sus índices e iniciando desde el índice 0, entre corchetes.
 
@@ -319,12 +319,24 @@ var comidas = ['pizza', 'café', 'empanadas', 'manzanas'];
 console.log(comidas.length); // 4
 console.log(comidas[0].length); // 5
 
-// Método .PUSH() permite agregar nuevos elementos al final del array.
-// Método .POP() permite eliminar elementos al final del array en forma bruta.
-// Método .UNSHIFT() permite agregar nuevos elementos al inicio de la array.
-// Método .SHIFT() permite eliminar elementos al inicio del array en forma bruta.
-// Método .SORT() ?
-// Método .SLICE() ?
+// METODOS
+// Funciones nativas/preestablecidas en los lenguajes de programación que permiten ahorrar líneas de códigos.
+
+// Método .PUSH() : permite agregar nuevos elementos al final del array.
+// Método .POP() : permite eliminar elementos al final del array en forma bruta.
+// Método .UNSHIFT() : permite agregar nuevos elementos al inicio de la array.
+// Método .SHIFT() : permite eliminar elementos al inicio del array en forma bruta.
+// Método .REVERSE() : permite invertir el array en su lugar.
+// Método .SORT() : permite ordenar los elementos de un arreglo.
+// Método .SLICE() : permite devolver una copia de una parte del array dentro de un nuevo array, empezando por inicio hasta fin (sin incluir este último).
+// Método .FILTER() : Permite crear un nuevo arreglo que incluye solo los elementos que cumplen una determinada condición.
+// Método .INCLUDES() : Permite determinar si un arreglo incluye o no un elemento específico (TRUE/FALSE).
+// Método .EVERY() : Permite determinar si todos los elementos de un arreglo cumplen o no una misma condición (TRUE/FALSE).
+// Método .SPLIT() : Convierte un string en un arreglo, donde cada elemento contendrá un sub-string, dependiendo del parámetro divisor que indiquemos.
+// Método .JOIN() : Se utiliza para unir todos los elementos de un array en una sola cadena, separándolos por el valor que especifiques como argumento
+// Método .MAP() : Se utiliza para crear un nuevo array a partir de los resultados de aplicar una función a cada uno de los elementos del array original.
+// Método .FOREACH() : Se utiliza para ejecutar una función dada una vez por cada elemento de un array (itera sobre cada uno de ellos).
+// Método .REDUCE() : Se utiliza para ejecutar una función reductora sobre cada elemento de un array, lo que da como resultado un único valor.
 
 var comidas = ['pizza', 'café', 'empanadas', 'manzanas'];
 
@@ -381,7 +393,7 @@ autos.forEach(function (auto) {
     console.log(auto);
 });
 
-// O se puede crear una instancia de una función para usarla como callback (sin necedidad de usar el argumento de índice).
+// O se puede crear una instancia de una función para usarla como callback (sin necesidad de usar el argumento de índice).
 
 var autos = ['Ford', 'Chevrolet', 'Toyota', 'Tesla'];
 function mostrarAuto(auto) {
@@ -450,6 +462,13 @@ var frases = palabras.reduce(function (acc, elemento) {
     return acc + "" + elemento;
 }, "Frase completa:");
 console.log(frases); // "Frase completa: Hola, mi nombre es Martin"
+
+// ARRAYS y MÉTODO .MAP
+// permite recorrer un arreglo y realizar una acción por cada elemento. La diferencia es que este método devuelve un nuevo arreglo los elementos modificados.
+
+var numeros = [ 1, 2, 3, 4 ];
+var masUno = numeros.map( (num) => { return num + 1 } );
+console.log(masUno);
 
 // OBJETO ARGUMENTS
 // Similar a los arrays, es una estructura.
